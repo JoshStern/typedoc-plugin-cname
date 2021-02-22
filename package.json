@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-cname",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CNAME file configuration for typedoc generation",
   "main": "dist/index.js",
   "types": "dits/index.d.ts",
