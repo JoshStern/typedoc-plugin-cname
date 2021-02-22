@@ -1,0 +1,41 @@
+{
+  "name": "typedoc-plugin-cname",
+  "version": "0.1.0",
+  "description": "CNAME file configuration for typedoc generation",
+  "main": "dist/index.js",
+  "types": "dits/index.d.ts",
+  "scripts": {
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "eslint --fix --ext .ts src",
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "cname",
+    "typedoc",
+    "typedocplugin",
+    "github",
+    "pages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoshStern/mktemp"
+  },
+  "author": "Josh Stern <josh.stern95@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoshStern/mktemp/issues"
+  },
+  "homepage": "https://github.com/JoshStern/mktemp",
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "typescript": "^4.1.5"
+  },
+  "peerDependencies": {
+    "typedoc": "^0.20.27"
+  }
+}
