@@ -15,11 +15,10 @@ export function load(host: PluginHost): void {
     defaultValue: '',
   });
 
-  app.renderer.once(RendererEvent.END, () => {
+  app.renderer.once(RendererEvent.END, (context: RendererEvent) => {
     const cnameValue = app.options.getValue('cname');
-    const outputDir = app.options.getValue('out') || './docs';
     if (typeof cnameValue === 'string' && cnameValue.length > 0) {
-      fs.writeFileSync(path.resolve(outputDir, 'CNAME'), cnameValue, {encoding: 'utf-8'});
+      fs.writeFileSync(path.resolve(context.outputDirectory, 'CNAME'), cnameValue);
     }
   });
 }

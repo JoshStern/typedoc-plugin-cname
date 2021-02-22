@@ -3,6 +3,7 @@
 coverage
 src
 docs
+testdocs
 
 jest.config.js
 tsconfig.json
