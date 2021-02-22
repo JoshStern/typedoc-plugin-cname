@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-cname",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CNAME file configuration for typedoc generation",
   "main": "dist/index.js",
   "types": "dits/index.d.ts",
@@ -8,7 +8,7 @@
     "lint": "eslint --ext .ts src",
     "lint:fix": "eslint --fix --ext .ts src",
     "build": "tsc",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run lint && npm run build",
     "test": "npm run lint"
   },
   "keywords": [
