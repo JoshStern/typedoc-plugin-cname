@@ -17,7 +17,7 @@ export function load(host: PluginHost): void {
 
   app.renderer.once(RendererEvent.END, () => {
     const cnameValue = app.options.getValue('cname');
-    const outputDir = app.options.getValue('out');
+    const outputDir = app.options.getValue('out') || './docs';
     if (typeof cnameValue === 'string' && cnameValue.length > 0) {
       fs.writeFileSync(path.resolve(outputDir, 'CNAME'), cnameValue, {encoding: 'utf-8'});
     }
